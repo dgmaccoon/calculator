@@ -2,20 +2,16 @@ import UIKit
 
 // Basic math functions
 func add(a: Double, b: Double) -> Double {
-    var result = a + b
-    return result
+    return a + b
 }
 func sub(a: Double, b: Double) -> Double {
-    var result = a - b
-    return result
+    return a - b
 }
 func mul(a: Double, b: Double) -> Double {
-    var result = a * b
-    return result
+    return a * b
 }
 func div(a: Double, b: Double) -> Double {
-    var result = a / b
-    return result
+    return a / b
 }
 
 typealias Binop = (Double, Double) -> Double
@@ -40,13 +36,18 @@ class ViewController: UIViewController {
     }
     
     func handleInput(str: String) {
-        if str == "-" {
-            if userInput.hasPrefix(str) {
-                // Strip off the first character (a dash)
-                userInput = userInput.substringFromIndex(userInput.startIndex.successor())
-            } else {
-                userInput = str + userInput
-            }
+
+//        if str == "-" {
+//            if userInput.hasPrefix(str) {
+//                // Strip off the first character (a dash)
+//                userInput = userInput.substringFromIndex(userInput.startIndex.successor())
+//
+//                let index = str.firstIndex(of:"-") ?? str.endIndex
+//                let end = str[index...]
+        
+        if let i = userInput.firstIndex(of: "-") {
+            userInput.remove(at: i) // Strip off the first character if it's a dash
+            print(userInput)
         } else {
             userInput += str
         }
@@ -56,7 +57,7 @@ class ViewController: UIViewController {
     
     func updateDisplay() {
         // If the value is an integer, don't show a decimal point
-        var iAcc = Int(accumulator)
+        let iAcc = Int(accumulator)
         if accumulator - Double(iAcc) == 0 {
             numField.text = "\(iAcc)"
         } else {
@@ -66,9 +67,9 @@ class ViewController: UIViewController {
     
     func doMath(newOp: String) {
         if userInput != "" && !numStack.isEmpty {
-            var stackOp = opStack.last
+            let stackOp = opStack.last
             if !((stackOp == "+" || stackOp == "-") && (newOp == "*" || newOp == "/")) {
-                var oper = ops[opStack.removeLast()]
+                let oper = ops[opStack.removeLast()]
                 accumulator = oper!(numStack.removeLast(), accumulator)
                 doEquals()
             }
@@ -84,7 +85,7 @@ class ViewController: UIViewController {
             return
         }
         if !numStack.isEmpty {
-            var oper = ops[opStack.removeLast()]
+            let oper = ops[opStack.removeLast()]
             accumulator = oper!(numStack.removeLast(), accumulator)
             if !opStack.isEmpty {
                 doEquals()
@@ -115,48 +116,49 @@ class ViewController: UIViewController {
     @IBOutlet var btn8: UIButton!
     @IBOutlet var btn9: UIButton!
 
+
     @IBAction func btn0Press(sender: UIButton) {
-        handleInput("0")
+        handleInput(str: "0")
     }
     @IBAction func btn1Press(sender: UIButton) {
-        handleInput("1")
+        handleInput(str: "1")
     }
     @IBAction func btn2Press(sender: UIButton) {
-        handleInput("2")
+        handleInput(str: "2")
     }
     @IBAction func btn3Press(sender: UIButton) {
-        handleInput("3")
+        handleInput(str: "3")
     }
     @IBAction func btn4Press(sender: UIButton) {
-        handleInput("4")
+        handleInput(str: "4")
     }
     @IBAction func btn5Press(sender: UIButton) {
-        handleInput("5")
+        handleInput(str: "5")
     }
     @IBAction func btn6Press(sender: UIButton) {
-        handleInput("6")
+        handleInput(str: "6")
     }
     @IBAction func btn7Press(sender: UIButton) {
-        handleInput("7")
+        handleInput(str: "7")
     }
     @IBAction func btn8Press(sender: UIButton) {
-        handleInput("8")
+        handleInput(str: "8")
     }
     @IBAction func btn9Press(sender: UIButton) {
-        handleInput("9")
+        handleInput(str: "9")
     }
     
     @IBAction func btnDecPress(sender: UIButton) {
         if hasIndex(stringToSearch: userInput, characterToFind: ".") == false {
-            handleInput(".")
+            handleInput(str: ".")
         }
     }
     
     @IBAction func btnCHSPress(sender: UIButton) {
         if userInput.isEmpty {
-            userInput = numField.text
+            userInput = numField.text!
         }
-        handleInput("-")
+        handleInput(str: "-")
     }
     
     @IBAction func btnACPress(sender: UIButton) {
@@ -168,19 +170,19 @@ class ViewController: UIViewController {
     }
     
     @IBAction func btnPlusPress(sender: UIButton) {
-        doMath("+")
+        doMath(newOp: "+")
     }
     
     @IBAction func btnMinusPress(sender: UIButton) {
-        doMath("-")
+        doMath(newOp: "-")
     }
     
     @IBAction func btnMultiplyPress(sender: UIButton) {
-        doMath("*")
+        doMath(newOp: "*")
     }
     
     @IBAction func btnDividePress(sender: UIButton) {
-        doMath("/")
+        doMath(newOp: "/")
     }
     
     @IBAction func btnEqualsPress(sender: UIButton) {
