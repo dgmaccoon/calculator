@@ -36,3 +36,31 @@ let numericPrefix = rawInput.prefix(while: { "0"..."9" ~= $0 })
 numericPrefix
 // numericPrefix is the substring "126"
 
+// MARK ------------------------------------
+
+func add(a: Double, b: Double) -> Double {
+    return a + b
+}
+func sub(a: Double, b: Double) -> Double {
+    return a - b
+}
+func mul(a: Double, b: Double) -> Double {
+    return a * b
+}
+func div(a: Double, b: Double) -> Double {
+    return a / b
+}
+
+typealias Binop = (Double, Double) -> Double
+let ops: [String: Binop] = [ "+" : add, "-" : sub, "*" : mul, "/" : div ]
+let dictTest = ["Al" : 500, "Peter" : 200]
+print(ops["+"])
+print(dictTest["Al"])
+
+let c = "123"
+let d = "-"
+
+var str2 = d + c
+print(str2)
+let total = Double(str2) + Double(10)
+print(total)

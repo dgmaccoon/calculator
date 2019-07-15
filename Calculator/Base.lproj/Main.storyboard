@@ -47,7 +47,7 @@
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="btn8Press:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="o8C-CB-DWk"/>
+                                            <action selector="numberButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="SQI-U6-TeQ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3mO-sx-hEE">
@@ -59,11 +59,10 @@
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="btn9Press:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ixM-hU-4AZ"/>
-                                            <action selector="numButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7Rs-j4-BKf"/>
+                                            <action selector="numberButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="zFt-dR-8e7"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yYh-Hj-yqS">
+                                    <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yYh-Hj-yqS">
                                         <rect key="frame" x="234" y="0.0" width="66" height="56"/>
                                         <color key="backgroundColor" red="0.3333333432674408" green="0.3333333432674408" blue="0.3333333432674408" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
@@ -72,7 +71,7 @@
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="btnPlusPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Lwe-Kk-kXK"/>
+                                            <action selector="btnPlusPressWithSender:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="et9-RW-4Im"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i0O-pt-gd4">
@@ -84,7 +83,7 @@
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="btn7Press:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="PUA-ij-44Y"/>
+                                            <action selector="numberButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="WzG-TJ-cWG"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Zw-Dj-mg9">
@@ -96,19 +95,7 @@
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="btn6Press:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Hvx-Bq-QTv"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcn-EK-0CD">
-                                        <rect key="frame" x="234" y="64" width="66" height="56"/>
-                                        <color key="backgroundColor" red="0.3333333432674408" green="0.3333333432674408" blue="0.3333333432674408" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                        <state key="normal" title="-">
-                                            <color key="titleColor" red="1" green="0.28179702949659169" blue="0.1708636379015317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="btnMinusPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="v32-qx-1h2"/>
+                                            <action selector="numberButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="S7n-ie-qK3"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9A1-WE-GYQ">
@@ -120,7 +107,7 @@
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="btn4Press:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="0Pn-dr-xDC"/>
+                                            <action selector="numberButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fxF-6l-I7m"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NpW-Cb-H4F">
@@ -132,7 +119,7 @@
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="btn2Press:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Vjr-NM-8gw"/>
+                                            <action selector="numberButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9Mm-WQ-y6g"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xke-K7-9kN">
@@ -144,10 +131,10 @@
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="btn3Press:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="4XI-4z-env"/>
+                                            <action selector="numberButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="czn-YN-YMa"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PQf-Cb-bkd">
+                                    <button opaque="NO" tag="34" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PQf-Cb-bkd">
                                         <rect key="frame" x="234" y="128" width="66" height="56"/>
                                         <color key="backgroundColor" red="0.3333333432674408" green="0.3333333432674408" blue="0.3333333432674408" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
@@ -156,7 +143,7 @@
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="btnMultiplyPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="x8k-vV-1UI"/>
+                                            <action selector="btnMultiplyPressWithSender:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="WTT-ql-9tm"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHz-qQ-XWj">
@@ -168,10 +155,10 @@
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="btn1Press:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9Ta-xi-fAx"/>
+                                            <action selector="numberButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gDH-Mm-VoC"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRd-Ro-yQ8">
+                                    <button opaque="NO" tag="43" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRd-Ro-yQ8">
                                         <rect key="frame" x="148" y="192" width="66" height="56"/>
                                         <color key="backgroundColor" red="0.3333333432674408" green="0.3333333432674408" blue="0.3333333432674408" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
@@ -180,10 +167,10 @@
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="btnEqualsPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="twb-Ii-MoO"/>
+                                            <action selector="btnEqualsPressWithSender:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gBz-5e-G86"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d83-DI-2DF">
+                                    <button opaque="NO" tag="44" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d83-DI-2DF">
                                         <rect key="frame" x="234" y="192" width="66" height="56"/>
                                         <color key="backgroundColor" red="0.3333333432674408" green="0.3333333432674408" blue="0.3333333432674408" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
@@ -192,7 +179,7 @@
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="btnDividePress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="bAV-BV-1iq"/>
+                                            <action selector="btnDividePressWithSender:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="mwY-jK-LaV"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JcV-kl-Dbq">
@@ -204,7 +191,7 @@
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="btn0Press:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="3rV-b5-MEs"/>
+                                            <action selector="numberButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="5lD-WU-5lL"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mDv-p8-ZXB">
@@ -216,10 +203,10 @@
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="btn5Press:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="WTi-ys-ugm"/>
+                                            <action selector="numberButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="VeT-q8-t6f"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVF-m8-kvJ">
+                                    <button opaque="NO" tag="42" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVF-m8-kvJ">
                                         <rect key="frame" x="74" y="192" width="66" height="56"/>
                                         <color key="backgroundColor" red="0.3333333432674408" green="0.3333333432674408" blue="0.3333333432674408" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
@@ -228,7 +215,19 @@
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="btnDecPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="MCQ-DW-5js"/>
+                                            <action selector="btnDecPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="UAf-oK-AUh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="24" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcn-EK-0CD">
+                                        <rect key="frame" x="234" y="64" width="66" height="56"/>
+                                        <color key="backgroundColor" red="0.3333333432674408" green="0.3333333432674408" blue="0.3333333432674408" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <state key="normal" title="-">
+                                            <color key="titleColor" red="1" green="0.28179702949659169" blue="0.1708636379015317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnMinusPressWithSender:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="JEo-4T-lf7"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -339,7 +338,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tIw-Jw-zVs">
                                 <rect key="frame" x="57" y="440" width="300" height="56"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6X-U3-rYm">
+                                    <button opaque="NO" tag="51" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6X-U3-rYm">
                                         <rect key="frame" x="0.0" y="0.0" width="66" height="56"/>
                                         <color key="backgroundColor" red="0.3333333432674408" green="0.3333333432674408" blue="0.3333333432674408" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -351,10 +350,10 @@
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="btnACPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="sYq-hz-w9R"/>
+                                            <action selector="btnACPressWithSender:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="66B-Wi-tet"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HEd-SD-0OP">
+                                    <button opaque="NO" tag="52" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HEd-SD-0OP">
                                         <rect key="frame" x="74" y="0.0" width="66" height="56"/>
                                         <color key="backgroundColor" red="0.3333333432674408" green="0.3333333432674408" blue="0.3333333432674408" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -366,7 +365,7 @@
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="btnCHSPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fWC-R3-WXx"/>
+                                            <action selector="btnCHSPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="4UZ-2s-eD9"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -400,24 +399,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="bntEquals" destination="uRd-Ro-yQ8" id="Xfk-rK-PxB"/>
-                        <outlet property="btn0" destination="JcV-kl-Dbq" id="xt4-4s-KmS"/>
-                        <outlet property="btn1" destination="aHz-qQ-XWj" id="JTu-Kv-m5l"/>
-                        <outlet property="btn2" destination="NpW-Cb-H4F" id="FSq-hP-rUc"/>
-                        <outlet property="btn3" destination="xke-K7-9kN" id="OU9-JA-sG6"/>
-                        <outlet property="btn4" destination="9A1-WE-GYQ" id="Slr-3y-hFu"/>
-                        <outlet property="btn5" destination="mDv-p8-ZXB" id="cnu-Xu-s8s"/>
-                        <outlet property="btn6" destination="6Zw-Dj-mg9" id="ShH-C3-KtM"/>
-                        <outlet property="btn7" destination="i0O-pt-gd4" id="6c9-TM-CDC"/>
-                        <outlet property="btn8" destination="WXy-qd-Kaf" id="a9d-1B-VnS"/>
-                        <outlet property="btn9" destination="3mO-sx-hEE" id="t94-AU-NXf"/>
-                        <outlet property="btnAdd" destination="yYh-Hj-yqS" id="FML-kW-O73"/>
-                        <outlet property="btnClear" destination="Y6X-U3-rYm" id="Nzg-1b-Kb6"/>
-                        <outlet property="btnDecimal" destination="TVF-m8-kvJ" id="fUL-of-9KE"/>
-                        <outlet property="btnDivide" destination="d83-DI-2DF" id="nPS-P6-NWE"/>
-                        <outlet property="btnMultiply" destination="PQf-Cb-bkd" id="Tp5-m3-Fqd"/>
-                        <outlet property="btnSubtract" destination="mcn-EK-0CD" id="Cno-6W-P21"/>
-                        <outlet property="button7Press" destination="i0O-pt-gd4" id="3Sz-oG-eQr"/>
                         <outlet property="numField" destination="IHL-1c-9Xc" id="PeP-ho-RqF"/>
                     </connections>
                 </viewController>

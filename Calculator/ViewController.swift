@@ -27,6 +27,8 @@ class ViewController: UIViewController {
     
     // Looks for a single character in a string.
     func hasIndex(stringToSearch str: String, characterToFind chr: Character) -> Bool {
+        print("--------dgm: hasIndex ----------")
+        print("Finding:\(chr) in \(str)")
         for c in str {
             if c == chr {
                 return true
@@ -36,33 +38,38 @@ class ViewController: UIViewController {
     }
     
     func handleInput(str: String) {
-
-//        if str == "-" {
-//            if userInput.hasPrefix(str) {
-//                // Strip off the first character (a dash)
-//                userInput = userInput.substringFromIndex(userInput.startIndex.successor())
-//
-//                let index = str.firstIndex(of:"-") ?? str.endIndex
-//                let end = str[index...]
         
         if let i = userInput.firstIndex(of: "-") {
             userInput.remove(at: i) // Strip off the first character if it's a dash
+            print("--------dgm: strip dash ----------")
             print(userInput)
         } else {
+            print("1: userInput=\(userInput)")
             userInput += str
+            print("2: userInput=\(userInput)")
         }
         accumulator = Double((userInput as NSString).doubleValue)
+        print("---------dgm: handleInput --------")
+        print("accumulator=\(accumulator)")
         updateDisplay()
     }
     
     func updateDisplay() {
         // If the value is an integer, don't show a decimal point
+
         let iAcc = Int(accumulator)
         if accumulator - Double(iAcc) == 0 {
+            print("--------dgm: updateDisplay if ----------")
+            print("accumulator=\(accumulator)")
+            print("iAcc=\(String(iAcc))")
             numField.text = "\(iAcc)"
         } else {
             numField.text = "\(accumulator)"
         }
+        print("--------dgm: updateDisplay----------")
+        print("accumulator=\(accumulator)")
+        print("userInput=\(userInput)")
+
     }
     
     func doMath(newOp: String) {
@@ -85,8 +92,13 @@ class ViewController: UIViewController {
             return
         }
         if !numStack.isEmpty {
-            let oper = ops[opStack.removeLast()]
+            print("opStack=\(opStack)")
+            let oper = ops[opStack.removeLast()] // pulls the function indexed by the last string in opStack
+            print("numStack=\(numStack)")
+            //print("numStack removeLast=\(numStack.removeLast())")
+            print("accumulator pre operation =\(accumulator)")
             accumulator = oper!(numStack.removeLast(), accumulator)
+            print("accumulator post operation =\(accumulator)")
             if !opStack.isEmpty {
                 doEquals()
             }
@@ -97,69 +109,33 @@ class ViewController: UIViewController {
 
     // UI Set-up
     @IBOutlet var numField: UITextField!
-    @IBOutlet var btnClear: UIButton!
-    @IBOutlet var bntEquals: UIButton!
-    @IBOutlet var btnAdd: UIButton!
-    @IBOutlet var btnSubtract: UIButton!
-    @IBOutlet var btnMultiply: UIButton!
-    @IBOutlet var btnDivide: UIButton!
-    @IBOutlet var btnDecimal: UIButton!
     
-    @IBOutlet var btn0: UIButton!
-    @IBOutlet var btn1: UIButton!
-    @IBOutlet var btn2: UIButton!
-    @IBOutlet var btn3: UIButton!
-    @IBOutlet var btn4: UIButton!
-    @IBOutlet var btn5: UIButton!
-    @IBOutlet var btn6: UIButton!
-    @IBOutlet var btn7: UIButton!
-    @IBOutlet var btn8: UIButton!
-    @IBOutlet var btn9: UIButton!
-
-
-    @IBAction func btn0Press(sender: UIButton) {
-        handleInput(str: "0")
-    }
-    @IBAction func btn1Press(sender: UIButton) {
-        handleInput(str: "1")
-    }
-    @IBAction func btn2Press(sender: UIButton) {
-        handleInput(str: "2")
-    }
-    @IBAction func btn3Press(sender: UIButton) {
-        handleInput(str: "3")
-    }
-    @IBAction func btn4Press(sender: UIButton) {
-        handleInput(str: "4")
-    }
-    @IBAction func btn5Press(sender: UIButton) {
-        handleInput(str: "5")
-    }
-    @IBAction func btn6Press(sender: UIButton) {
-        handleInput(str: "6")
-    }
-    @IBAction func btn7Press(sender: UIButton) {
-        handleInput(str: "7")
-    }
-    @IBAction func btn8Press(sender: UIButton) {
-        handleInput(str: "8")
-    }
-    @IBAction func btn9Press(sender: UIButton) {
-        handleInput(str: "9")
+// Move to implementing button presses using tags
+// Tag numbering scheme.
+//      0-9 number keys have the same tags (e.g., 0 key has tag 0)
+//      For all other keys, the 2-digit tag number is rowColumn. Row 1, column 1 is upper left button.
+//          (e.g., = button is tag 43)
+    @IBAction func numberButtonPressed(_ sender: UIButton) {
+        handleInput(str: String(sender.tag))
     }
     
-    @IBAction func btnDecPress(sender: UIButton) {
+    @IBAction func btnDecPress(_ sender: UIButton) {
         if hasIndex(stringToSearch: userInput, characterToFind: ".") == false {
             handleInput(str: ".")
+            print("--------dgm: btnDecPress----------")
         }
+    }
+   
+    @IBAction func btnCHSPress(_ sender: UIButton) {
+        print("--------dgm: btnCHSPress ----------")
+//        if userInput.isEmpty {
+//            userInput = numField.text!
+//        }
+        accumulator *= -1.0
+        userInput = String(accumulator)
+        updateDisplay()
     }
     
-    @IBAction func btnCHSPress(sender: UIButton) {
-        if userInput.isEmpty {
-            userInput = numField.text!
-        }
-        handleInput(str: "-")
-    }
     
     @IBAction func btnACPress(sender: UIButton) {
         userInput = ""
