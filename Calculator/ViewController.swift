@@ -27,7 +27,6 @@ class ViewController: UIViewController {
     
     // Looks for a single character in a string.
     func hasIndex(stringToSearch str: String, characterToFind chr: Character) -> Bool {
-        print("--------dgm: hasIndex ----------")
         print("Finding:\(chr) in \(str)")
         for c in str {
             if c == chr {
@@ -41,16 +40,11 @@ class ViewController: UIViewController {
         
         if let i = userInput.firstIndex(of: "-") {
             userInput.remove(at: i) // Strip off the first character if it's a dash
-            print("--------dgm: strip dash ----------")
             print(userInput)
         } else {
-            print("1: userInput=\(userInput)")
             userInput += str
-            print("2: userInput=\(userInput)")
         }
         accumulator = Double((userInput as NSString).doubleValue)
-        print("---------dgm: handleInput --------")
-        print("accumulator=\(accumulator)")
         updateDisplay()
     }
     
@@ -59,17 +53,11 @@ class ViewController: UIViewController {
 
         let iAcc = Int(accumulator)
         if accumulator - Double(iAcc) == 0 {
-            print("--------dgm: updateDisplay if ----------")
-            print("accumulator=\(accumulator)")
             print("iAcc=\(String(iAcc))")
             numField.text = "\(iAcc)"
         } else {
             numField.text = "\(accumulator)"
         }
-        print("--------dgm: updateDisplay----------")
-        print("accumulator=\(accumulator)")
-        print("userInput=\(userInput)")
-
     }
     
     func doMath(newOp: String) {
@@ -92,13 +80,8 @@ class ViewController: UIViewController {
             return
         }
         if !numStack.isEmpty {
-            print("opStack=\(opStack)")
             let oper = ops[opStack.removeLast()] // pulls the function indexed by the last string in opStack
-            print("numStack=\(numStack)")
-            //print("numStack removeLast=\(numStack.removeLast())")
-            print("accumulator pre operation =\(accumulator)")
             accumulator = oper!(numStack.removeLast(), accumulator)
-            print("accumulator post operation =\(accumulator)")
             if !opStack.isEmpty {
                 doEquals()
             }
@@ -122,15 +105,10 @@ class ViewController: UIViewController {
     @IBAction func btnDecPress(_ sender: UIButton) {
         if hasIndex(stringToSearch: userInput, characterToFind: ".") == false {
             handleInput(str: ".")
-            print("--------dgm: btnDecPress----------")
         }
     }
    
     @IBAction func btnCHSPress(_ sender: UIButton) {
-        print("--------dgm: btnCHSPress ----------")
-//        if userInput.isEmpty {
-//            userInput = numField.text!
-//        }
         accumulator *= -1.0
         userInput = String(accumulator)
         updateDisplay()
